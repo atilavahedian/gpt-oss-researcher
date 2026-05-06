@@ -38,7 +38,7 @@ Verifier reranking is useful when the correct answer appears somewhere in the ca
 - Dataset SHA-256: `18327d9f3d764c8c28b179b2297bc057442a0a24226db56a93b71790774b730f`
 - Provider: `fixture`
 - Python: `3.9.6`
-- Git commit: `unavailable`
+- Git commit: `b93f0e0`
 
 Run:
 
