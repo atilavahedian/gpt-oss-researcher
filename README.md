@@ -1,10 +1,14 @@
 # gpt-oss-researcher
 
-An evidence-first AI research repo for verifier-guided test-time compute.
+A research project that tests whether GPT OSS models can improve their answers with verifier guided experiments and clear evidence.
 
 This is not a product, web app, or chatbot wrapper. It is a reproducible research codebase: an AI researcher proposes a hypothesis, runs a controlled experiment, records artifacts, analyzes the result, and writes a paper-style report.
 
-The default model policy prefers American/open-weight models, especially `openai/gpt-oss-20b` and `openai/gpt-oss-120b`. Local verification uses a deterministic fixture provider so the repository can be tested without downloading large weights.
+The default model policy prefers American open weight models, especially `openai/gpt-oss-20b` and `openai/gpt-oss-120b`. Local verification uses a deterministic fixture provider so the repository can be tested without downloading large weights.
+
+## About
+
+This project asks a simple question: if a model gives several possible answers, can verifiers help choose the best one? The repo runs that experiment, saves what happened, and turns the run into a readable research report. It is meant to feel like a small ML research notebook that someone else can inspect, rerun, and challenge.
 
 ## Research Question
 
@@ -76,17 +80,3 @@ results/
 tests/
   test_*.py            # behavior tests for the research pipeline and CLI
 ```
-
-## Why This Is Serious
-
-The project does not claim frontier performance from a small fixture run. It proves the machinery needed for serious research:
-
-- explicit hypothesis
-- controlled strategies
-- comparable metrics
-- sample-cost accounting
-- model policy provenance
-- reproducible artifacts
-- limitations written into the report
-
-That gives a clean path to scale from fixture verification to real `gpt-oss` inference.
