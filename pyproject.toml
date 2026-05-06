@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpt-oss-researcher"
+version = "0.1.0"
+description = "A reproducible AI research agent for verifier-guided test-time compute experiments."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Atila Vahedian" }]
+license = { text = "MIT" }
+keywords = ["ai-research", "gpt-oss", "evals", "test-time-compute", "verifiers"]
+dependencies = []
+
+[project.optional-dependencies]
+models = [
+  "accelerate>=0.34",
+  "datasets>=2.20",
+  "openai>=1.50",
+  "torch>=2.3",
+  "transformers>=4.55",
+]
+viz = ["matplotlib>=3.8", "pandas>=2.2"]
+
+[project.scripts]
+gpt-oss-researcher = "gpt_oss_researcher.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

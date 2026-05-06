@@ -1,0 +1,37 @@
+{
+  "best_strategy": "verifier_rerank",
+  "strategies": {
+    "adaptive_verifier_rerank": {
+      "accuracy": 1.0,
+      "avg_samples_per_task": 1.8,
+      "correct_tasks": 5,
+      "mean_verifier_score": 1.0,
+      "strategy": "adaptive_verifier_rerank",
+      "total_tasks": 5
+    },
+    "self_consistency": {
+      "accuracy": 0.8,
+      "avg_samples_per_task": 4.0,
+      "correct_tasks": 4,
+      "mean_verifier_score": 0.8,
+      "strategy": "self_consistency",
+      "total_tasks": 5
+    },
+    "single": {
+      "accuracy": 0.2,
+      "avg_samples_per_task": 1.0,
+      "correct_tasks": 1,
+      "mean_verifier_score": 0.2,
+      "strategy": "single",
+      "total_tasks": 5
+    },
+    "verifier_rerank": {
+      "accuracy": 1.0,
+      "avg_samples_per_task": 4.0,
+      "correct_tasks": 5,
+      "mean_verifier_score": 1.0,
+      "strategy": "verifier_rerank",
+      "total_tasks": 5
+    }
+  }
+}

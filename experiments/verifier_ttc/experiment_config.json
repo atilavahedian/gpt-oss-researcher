@@ -1,0 +1,90 @@
+{
+  "adaptive_threshold": 0.99,
+  "hypothesis": "If the correct answer appears in a sampled candidate set, verifier reranking will outperform a single-answer baseline; adaptive reranking will retain most of the gain while using fewer samples than fixed reranking.",
+  "research_question": "Can verifier-guided test-time compute improve answer accuracy over a single generation while making the extra sample cost explicit?",
+  "sample_count": 4,
+  "strategies": [
+    "single",
+    "self_consistency",
+    "verifier_rerank",
+    "adaptive_verifier_rerank"
+  ],
+  "tasks": [
+    {
+      "answer": "13",
+      "fixture_candidates": [
+        "12",
+        "13",
+        "14",
+        "13"
+      ],
+      "id": "arithmetic_13",
+      "question": "What is 8 + 5?",
+      "rubric_keywords": [
+        "13"
+      ],
+      "source": "synthetic_control"
+    },
+    {
+      "answer": "Sacramento",
+      "fixture_candidates": [
+        "Los Angeles",
+        "Sacramento",
+        "San Francisco",
+        "Sacramento"
+      ],
+      "id": "capital_california",
+      "question": "What is the capital of California?",
+      "rubric_keywords": [
+        "Sacramento"
+      ],
+      "source": "synthetic_control"
+    },
+    {
+      "answer": "Seattle",
+      "fixture_candidates": [
+        "Seattle",
+        "Spokane",
+        "Seattle",
+        "Portland"
+      ],
+      "id": "space_needle",
+      "question": "Which U.S. city is the Space Needle in?",
+      "rubric_keywords": [
+        "Seattle"
+      ],
+      "source": "synthetic_control"
+    },
+    {
+      "answer": "true",
+      "fixture_candidates": [
+        "false",
+        "true",
+        "true",
+        "false"
+      ],
+      "id": "prime_boolean",
+      "question": "Is 29 a prime number? Answer true or false.",
+      "rubric_keywords": [
+        "true"
+      ],
+      "source": "synthetic_control"
+    },
+    {
+      "answer": "1776",
+      "fixture_candidates": [
+        "1789",
+        "1776",
+        "1776",
+        "1775"
+      ],
+      "id": "declaration_year",
+      "question": "In what year was the U.S. Declaration of Independence adopted?",
+      "rubric_keywords": [
+        "1776"
+      ],
+      "source": "synthetic_control"
+    }
+  ],
+  "title": "Verifier-Guided Test-Time Compute on Bounded QA"
+}
